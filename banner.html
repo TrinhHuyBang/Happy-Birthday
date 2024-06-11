@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web này dành cho bé Thư</title>
+    <title>Happy Birthday Tú Tú</title>
     <link rel="stylesheet" href="banner_styles.css" />
     <link rel="icon" type="image/x-icon" href="./birthdayCake.png">
     <link
@@ -52,19 +52,18 @@
           <div class="date__of__birth">
             <span></span>
           </div>
-         
+          <div class="letter__icon" style="display: none; text-align: center; cursor: pointer; width: 70px; margin-top: 20px;">
+            <img src="./images/letter.png" alt="Letter" width="70" />
+          </div>
         </div>
         <div class="right">
           <div class="box__account">
             <div class="image">
-              <img
-                src="./images/my-love.png"
-                alt=""
-              />
+              <img src="./images/tutu.jpg" alt="" />
             </div>
             <div class="name">
               <i class="fa-solid fa-heart"></i>
-              <span>Anh Thư</span>
+              <span>Tú Tú</span>
               <i class="fa-solid fa-heart"></i>
             </div>
             <div class="balloon_one">
@@ -74,7 +73,6 @@
               <img width="100px" src="./images/balloon2.png" alt="" />
             </div>
           </div>
-    
         </div>
       </div>
       <div class="decorate_star star1" style="--t: 15s;"></div>
@@ -88,53 +86,8 @@
           <div class="letter">
             <div class="title__letter"></div>
             <div class="content__letter">
-              <div class="left">
-                <img
-                  id="heart__letter"
-                  src="https://media.giphy.com/media/YKUvclrGYmDKXwtphf/giphy.gif"
-                  alt=""
-                />
-                <img
-                  class="heart heart_1"
-                  style="--t: 0.2s"
-                  width="20"
-                  src="./images/heart.png"
-                  alt=""
-                />
-                <img
-                  class="heart heart_2"
-                  style="--t: 0.4s"
-                  width="20"
-                  src="./images/heart.png"
-                  alt=""
-                />
-                <img
-                  class="heart heart_3"
-                  style="--t: 0.6s"
-                  width="20"
-                  src="./images/heart.png"
-                  alt=""
-                />
-                <img
-                  class="heart heart_4"
-                  style="--t: 0.8s"
-                  width="20"
-                  src="./images/heart.png"
-                  alt=""
-                />
-              </div>
-              <div class="right">
-                <div class="love__img">
-                  <img
-                    src="https://media.giphy.com/media/m85llaN7ZkFIHtURiC/giphy.gif"
-                    alt=""
-                    width="220"
-                  />
-                </div>
-                <div class="text__letter">
-                  <p></p>
-                </div>
-                <img id="mewmew" width="80" src="./images/mewmew.gif" alt="" />
+              <div class="text__letter">
+                <p></p>
               </div>
             </div>
           </div>
@@ -146,37 +99,68 @@
     </div>
   </body>
   <script>
-        let datetxt = "05/06/2002";
-        let datatxtletter = "Tình yêu của đời anh. Em là một cô gái rất đặc biệt. Anh luôn thầm cảm ơn vì em đã đến bên cạnh anh. Ngày hôm nay anh chúc em mọi điều an lành, thật nhiều sức khỏe, thật nhiều niềm vui. Anh luôn hy vọng mình sẽ luôn cùng nhau đón nhiều sinh nhật như thế này. Mừng sinh nhật em.💕";
-        let titleLetter = "Gửi em";
-        let charArrDate = datetxt.split('');
-        let charArrDateLetter = datatxtletter.split('');
-        let charArrTitle = titleLetter.split('');
-        let currentIndex = 0;
-        let currentIndexLetter = 0;
-        let currentIndexTitle = 0;
-        let date__of__birth = document.querySelector(".date__of__birth span");
-        let text__letter = document.querySelector(".text__letter p");
-        setTimeout(function(){
-            timeDatetxt = setInterval(function(){
-                if(currentIndex < charArrDate.length){
-                    date__of__birth.textContent += charArrDate[currentIndex];
-                    currentIndex++;
-                }
-                else{
-                    let i = document.createElement("i");
-                    i.className = "fa-solid fa-star"
-                    document.querySelector(".date__of__birth").prepend(i)
-                    document.querySelector(".date__of__birth").appendChild(i.cloneNode(true))
-                    clearInterval(timeDatetxt)
-                }
-            },100)
-        },6000)
+    let datetxt = "11/06/1999";
+    let datatxtletter = "Chúc bà sinh nhật vui vẻ nhó! Tuổi mới nhiều sức khỏe he. Công việc cứ đều đều còn có sức mà cày cuốc :)))";
+    let titleLetter = "Chúc mừng sinh nhật Tú Tú!!!";
+    let charArrDate = datetxt.split('');
+    let charArrDateLetter = datatxtletter.split('');
+    let charArrTitle = titleLetter.split('');
+    let currentIndex = 0;
+    let currentIndexLetter = 0;
+    let currentIndexTitle = 0;
+    let date__of__birth = document.querySelector(".date__of__birth span");
+    let text__letter = document.querySelector(".text__letter p");
+    let title__letter = document.querySelector(".title__letter");
+    let letter__icon = document.querySelector(".letter__icon");
+    let box__letter = document.querySelector(".box__letter");
 
-        var intervalContent;
-        var intervalTitle;
-       
-       document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function(){
+        let timeDatetxt = setInterval(function(){
+            if(currentIndex < charArrDate.length){
+                date__of__birth.textContent += charArrDate[currentIndex];
+                currentIndex++;
+            } else {
+                let i = document.createElement("i");
+                i.className = "fa-solid fa-star"
+                document.querySelector(".date__of__birth").prepend(i)
+                document.querySelector(".date__of__birth").appendChild(i.cloneNode(true))
+                letter__icon.style.display = "block";
+                clearInterval(timeDatetxt)
+            }
+        }, 100)
+    }, 6000)
+
+    letter__icon.addEventListener("click", function() {
+        box__letter.style.display = "block";
+    });
+
+    document.querySelector(".close").addEventListener("click", function() {
+        box__letter.style.display = "none";
+    });
+
+    setTimeout(function(){
+        intervalTitle = setInterval(function(){
+            if(currentIndexTitle < charArrTitle.length){
+                title__letter.innerHTML += charArrTitle[currentIndexTitle];
+                currentIndexTitle++;
+            } else {
+                clearInterval(intervalTitle);
+            }
+        }, 100);
+    }, 8000)
+
+    setTimeout(function(){
+        intervalContent = setInterval(function(){
+            if(currentIndexLetter < charArrDateLetter.length){
+                text__letter.innerHTML += charArrDateLetter[currentIndexLetter];
+                currentIndexLetter++;
+            } else {
+                clearInterval(intervalContent);
+            }
+        }, 100);
+    }, 12000)
+
+    document.addEventListener("DOMContentLoaded", function() {
         // Check if the page has been reloaded
         if (performance.navigation.type === 1) {
             // Redirect to the new URL

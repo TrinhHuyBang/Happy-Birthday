@@ -501,8 +501,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
 }
+
 .letter__border .close {
   position: absolute;
   right: -10px;
@@ -616,7 +616,7 @@ body {
 .love__img.animationOp {
   animation: opacityHeart 1s 1s forwards;
 }
-.content__letter .right .text__letter {
+.content__letter .text__letter {
   margin-top: 60px;
   padding: 20px 15px 10px 15px;
   font-family: 'Dancing Script', cursive;
